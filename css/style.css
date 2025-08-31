@@ -24,3 +24,12 @@ main {
     background-color: lightskyblue;
     transition: 800ms;
 }
+
+.parrafoAmplio{
+    transition: font-size 600ms ease-out 200ms;
+}
+
+.parrafoAmplio:hover{
+    font-size: large;
+    cursor: pointer;
+}
