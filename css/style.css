@@ -1,47 +1,70 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
 }
 
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 /* transición de color */
 .item {
-    background-color: tomato;
-    width: 200px;
-    height: 200px;
-    transition-property: background-color;
-    transition-duration: 800ms;
-    transition-timing-function: linear;
-    transition-delay: 500ms;
-    /* Puedo usar esto para el nav del proyecto */
+  background-color: tomato;
+  width: 200px;
+  height: 200px;
+  transition-property: background-color;
+  transition-duration: 800ms;
+  transition-timing-function: linear;
+  transition-delay: 500ms;
+  /* Puedo usar esto para el nav del proyecto */
 }
 
 .item:hover {
-    background-color: lightskyblue;
-    transition: 800ms;
+  background-color: lightskyblue;
+  transition: 800ms;
 }
 
-.parrafoAmplio{
-    transition: font-size 600ms ease-out 200ms;
+.parrafoAmplio {
+  transition: font-size 600ms ease-out 200ms;
 }
 
-.parrafoAmplio:hover{
-    font-size: large;
+.parrafoAmplio:hover {
+  font-size: large;
+  cursor: pointer;
+}
+
+.itemOpacity {
+  width: 200px;
+  height: 100px;
+  background-color: rebeccapurple;
+  opacity: 0.5;
+  transition: opacity 200ms ease-in-out;
+}
+
+.itemOpacity:hover {
+  opacity: 1;
+}
+
+.subrayado {
+  position: relative;
+  display: inline-block;
+  &:hover {
     cursor: pointer;
+  }
 }
 
-.itemOpacity{
-    width: 200px;
-    height: 100px;
-    background-color: rebeccapurple;
-    opacity: 0.5;
-    transition: opacity 200ms ease-in-out;
+.subrayado::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  background-color: chartreuse;
+  height: 2px;
+  transition: width 450ms ease-in;
 }
 
-.itemOpacity:hover{
-    opacity: 1;
+.subrayado:hover::after {
+  width: 100%;
 }
