@@ -95,7 +95,7 @@ main {
   }
 }
 
-/*animación de rotacion*/
+/*Animación de rotacion*/
 .rotatedP {
   animation: rotated 3s linear infinite;
 }
@@ -109,5 +109,21 @@ main {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/*Animación de escala*/
+.scaleP{
+  animation: scale 3s ease infinite alternate;
+}
+@keyframes scale {
+  0%{
+    transform: scale(1);
+  }
+  35%{
+    transform: scale(2);
+  }
+  100%{
+    transform: scale(0.7);
   }
 }
