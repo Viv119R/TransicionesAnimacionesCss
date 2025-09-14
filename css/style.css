@@ -73,24 +73,41 @@ main {
 }
 
 /*Animacion de movimiento*/
-.containerAnimated{
+.containerAnimated {
   width: 150px;
   height: 25px;
   background-color: rgb(143, 142, 142);
   color: black;
   animation-name: moving;
   animation-duration: 2s;
-  animation-timing-function: cubic-bezier(1,-0,31,0,1.25);
+  animation-timing-function: cubic-bezier(1, -0, 31, 0, 1.25);
   animation-direction: alternate-reverse;
   animation-iteration-count: infinite;
 }
 
 @keyframes moving {
-  from{
+  from {
     /*Aqui nombro los valores de css quiero que la animación en el inicio*/
-  transform: translateX(0px)
+    transform: translateX(0px);
   }
-  to{
-    transform:translate(60dvh)
+  to {
+    transform: translate(60dvh);
+  }
+}
+
+/*animación de rotacion*/
+.rotatedP {
+  animation: rotated 3s linear infinite;
+}
+
+@keyframes rotated {
+  0% {
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
